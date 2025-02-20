@@ -15,7 +15,7 @@ import torch.optim as optim
 from tqdm import tqdm
 
 # ------------------------------------------
-# Globals & Colors (from your original code)
+# Globals & Colors (from original code)
 # ------------------------------------------
 ROW_COUNT = 6
 COLUMN_COUNT = 7
@@ -483,8 +483,8 @@ def main():
 
         net = train_alphazero(
             env, net,
-            num_iterations=1,    # Increase number of iterations
-            games_per_iter=50,   # More self-play games per iteration
+            num_iterations=50,    # Increase number of iterations
+            games_per_iter=500,   # More self-play games per iteration
             n_sims=200,           # Higher number of MCTS simulations
             batch_size=64,
             lr=1e-3
